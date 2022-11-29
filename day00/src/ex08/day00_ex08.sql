@@ -1,4 +1,4 @@
-SELECT id, person_id, menu_id, order_date
+SELECT *
 FROM person_order
-WHERE id % 2 != 0
+WHERE id % 2 = 0
 ORDER BY id;
