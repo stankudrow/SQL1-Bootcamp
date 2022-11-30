@@ -8,5 +8,5 @@ SELECT
     pizzeria.id AS "pizzeria.id",
     pizzeria.name AS "pizzeria.name",
     pizzeria.rating AS "pizzeria.rating"
-FROM person, pizzeria;
+FROM person, pizzeria
 ORDER BY person.id, pizzeria.id;
