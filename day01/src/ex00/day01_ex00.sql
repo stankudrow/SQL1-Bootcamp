@@ -6,4 +6,4 @@ FROM (
     SELECT id AS object_id, name AS object_name
     FROM person
 ) AS global_list
-ORDER BY LOWER(object_name)
+ORDER BY object_id, object_name;
