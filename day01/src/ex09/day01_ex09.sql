@@ -8,7 +8,7 @@ WHERE id NOT IN (
 SELECT name
 FROM pizzeria AS p
 WHERE NOT EXISTS (
-    SELECT *
-    FROM person_visits AS pv
-    WHERE pv.pizzeria_id = p.id
+    SELECT pizzeria_id
+    FROM person_visits
+    WHERE pizzeria_id = p.id
 );
