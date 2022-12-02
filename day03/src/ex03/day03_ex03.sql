@@ -1,19 +1,19 @@
 WITH women (pizzeria_name) AS (
-    SELECT pz.name AS pizzeria_name 
-    FROM person AS p
+    SELECT pz.name AS pizzeria_name
+    FROM pizzeria AS pz
     JOIN person_visits AS pv
-    ON p.id = pv.person_id
-    JOIN pizzeria AS pz
-    ON pv.pizzeria_id = pz.id
+    ON pz.id = pv.pizzeria_id
+    JOIN person AS p
+    ON pv.person_id = p.id
     WHERE p.gender = 'female'
 ),
     men (pizzeria_name) AS (
-    SELECT pz.name AS pizzeria_name 
-    FROM person AS p
+    SELECT pz.name AS pizzeria_name
+    FROM pizzeria AS pz
     JOIN person_visits AS pv
-    ON p.id = pv.person_id
-    JOIN pizzeria AS pz
-    ON pv.pizzeria_id = pz.id
+    ON pz.id = pv.pizzeria_id
+    JOIN person AS p
+    ON pv.person_id = p.id
     WHERE p.gender = 'male'
 )
 
